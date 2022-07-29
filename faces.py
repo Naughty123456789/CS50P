@@ -5,10 +5,10 @@ def main():
 
 
 def convert(s):
-    if ":)" in s:
-        return s.replace(":)","🙂")
-    if ":(" in s:
-        return s.replace(":(","🙁")
+
+    return s.replace(":)","🙂").replace(":(","🙁")
+
+
 
 
 if __name__ == "__main__":
