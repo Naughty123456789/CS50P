@@ -1,4 +1,4 @@
-boobs = input("WHAT IS YOUR BOOBS")
+x = input("Input:")
 
-boobs= boobs.replace(" " , "...")
-print(boobs)
+y= x.replace(" " , "...")
+print(y)
