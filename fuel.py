@@ -11,7 +11,7 @@ def main():
 
 
 
-            final=(s/z)*100
+            final=round((s/z)*100)
 
             if final<=1:
                 print("E")
