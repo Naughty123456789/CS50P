@@ -11,7 +11,7 @@ def main():
 
         except EOFError:
             print("")
-            for i in d:
+            for i in sorted(d):
                 print(d[i],i)
             break
 
