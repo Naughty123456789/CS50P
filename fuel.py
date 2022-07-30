@@ -1,10 +1,12 @@
 def main():
 
-    i=0
+
     while True:
-        fraction=input("Fraction:").strip()
-        x,y=fraction.split("/")
         try:
+            fraction=input("Fraction:").strip()
+
+            x,y=fraction.split("/")
+
             s=int(x)
             z=int(y)
 
@@ -36,9 +38,7 @@ def main():
         except ZeroDivisionError:
             print("Zero Division Error")
             pass
-        i+=1
-        if i==10:
-            break
+
 
 
 
