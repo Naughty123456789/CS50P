@@ -8,7 +8,7 @@ def main():
     "Super Burrito": 8.50,
     "Super Quesadilla": 9.50,
     "Taco": 3.00,
-    "Tortilla Salad": 8.00
+    "Tortilla Salad": 8.00,
     }
 
     total=0
@@ -17,7 +17,7 @@ def main():
             item=input("Item:").strip()
             if item in d:
                     total+=d[item]
-                    print("Total:",end="")
+                    print("Total: $",end="")
                     print("{:.2f}".format(total))
         except EOFError:
             print("")
