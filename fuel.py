@@ -25,10 +25,7 @@ def main():
                 print(int(final),"%",sep="")
                 break
 
-            i+=1
 
-            if i=10:
-                break
 
 
         except ValueError:
@@ -39,6 +36,9 @@ def main():
         except ZeroDivisionError:
             print("Zero Division Error")
             pass
+        i+=1
+        if i==10:
+            break
 
 
 
