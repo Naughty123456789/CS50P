@@ -1,6 +1,6 @@
 def main():
 
-
+    i=0
     while True:
         fraction=input("Fraction:").strip()
         x,y=fraction.split("/")
@@ -23,6 +23,11 @@ def main():
                 pass
             else:
                 print(int(final),"%",sep="")
+                break
+
+            i+=1
+
+            if i=10:
                 break
 
 
