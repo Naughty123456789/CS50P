@@ -9,6 +9,9 @@ def main():
                 b=int(y)
                 c=int(z)
 
+                if x.isalpha():
+                    raise UnboundLocalError
+
 
 
 
@@ -18,9 +21,13 @@ def main():
 
             elif "," in date:
                 x,y,z=date.split(" ")
+                if y.isalpha():
+                    raise UnboundLocalError
+
 
                 c=int(z)
                 b=int(y.replace(",",""))
+
 
                 mylist=[
                 "January",
