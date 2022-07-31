@@ -5,6 +5,8 @@ def main():
 
             if "/" in date:
                 x,y,z=date.split("/")
+                if x.isalpha():
+                    raise UnboundLocalError
                 a=int(x)
                 b=int(y)
                 c=int(z)
@@ -22,7 +24,7 @@ def main():
             elif "," in date:
                 x,y,z=date.split(" ")
                 if y.isalpha():
-                    raise UnboundLocalError
+                    raise ValueError
 
 
                 c=int(z)
@@ -57,6 +59,10 @@ def main():
         except UnboundLocalError:
             print("Wrong format")
             pass
+        except ValueError:
+            print("Wrong format")
+            pass
+
 
 
 
