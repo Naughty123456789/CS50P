@@ -11,7 +11,7 @@ def main():
         figlet.getFonts()
         print(figlet.renderText(user))
 
-    if len(sys.argv)==3:
+    elif len(sys.argv)==3:
         if sys.argv[1] =="-f" or sys.argv[1] =="--font":
             user=input("Input:").strip()
             fonttype=sys.argv[2]
@@ -26,7 +26,11 @@ def main():
 
         else:
             print("Invalid usage")
-            sys.exit(1)
+            sys.exit(2)
+
+    else:
+        print("Invalid usage")
+        sys.exit(1)
 
 
 
