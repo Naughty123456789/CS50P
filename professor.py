@@ -9,7 +9,7 @@ def main():
     three_tries=1
     while num_questions<10:
         x,y= generate_integer(level)
-        answer=input(f"{x}+{y}=")
+        answer=input(f"{x} + {y} =")
 
         if answer.isalpha()==False and (x+y)== int(answer):
             correct_answers+=1
@@ -19,7 +19,7 @@ def main():
             while True:
 
 
-                answer=input(f"{x}+{y}=")
+                answer=input(f"{x} + {y} =")
 
                 if answer.isalpha()==False and (x+y)==int(answer):
                     correct_answers+=1
@@ -28,7 +28,7 @@ def main():
 
 
                 elif three_tries==2:
-                    print(f"{x}+{y}={x+y}")
+                    print(f"{x} + {y} = {x+y}")
                     three_tries=1
                     break
 
