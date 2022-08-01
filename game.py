@@ -19,7 +19,7 @@ def main():
 
             if guess<1:
                 print(4/0)
-        except ValueError:
+        except UnboundLocalError:
             print("Not an integer")
             pass
 
@@ -27,16 +27,13 @@ def main():
             print("Not a positive integer")
             pass
 
-
-
-
         if guess<generated_number:
-            print("Too small")
+            print("Too small!")
         if guess>generated_number:
-            print("Too big")
+            print("Too large!")
 
         if guess== generated_number:
-            print("Just right")
+            print("Just right!")
             break
 
 
