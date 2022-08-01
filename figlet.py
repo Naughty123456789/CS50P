@@ -14,10 +14,12 @@ def main():
     elif len(sys.argv)==3:
         if sys.argv[1] =="-f" or sys.argv[1] =="--font":
             user=input("Input:").strip()
-            fonttype=sys.argv[2]
-            figlet.getFonts()
-            figlet.setFont(font=fonttype)
-            print(figlet.renderText(user))
+            try:
+                fonttype=sys.argv[2]
+                figlet.getFonts()
+            except:
+                figlet.setFont(font=fonttype)
+                print(figlet.renderText(user))
 
 
 
