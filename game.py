@@ -1,4 +1,5 @@
 import random
+import sys
 
 
 def main():
@@ -30,7 +31,7 @@ def main():
 
             if guess==generated_number:
                 print("Just right!")
-                break
+                sys.exit(1)
 
         except (ValueError, UnboundLocalError):
             print("Not an integer")
