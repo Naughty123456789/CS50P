@@ -1,5 +1,6 @@
 import sys
 from pyfiglet import Figlet
+import random
 
 
 def main():
@@ -13,11 +14,13 @@ def main():
 
     elif len(sys.argv)==3:
         if sys.argv[1] =="-f" or sys.argv[1] =="--font":
-            user=input("Input:").strip()
+
             fonttype=sys.argv[2]
             figlet.getFonts()
             try:
+
                 figlet.setFont(font=fonttype)
+                user=input("Input:").strip()
                 print(figlet.renderText(user))
             except:
                 print("Invalid usage")
