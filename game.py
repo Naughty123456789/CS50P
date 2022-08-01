@@ -1,4 +1,5 @@
 import random
+import sys
 
 
 def main():
@@ -15,24 +16,29 @@ def main():
 
     while True:
         try:
-            guess=int(input("Guess:").strip())
+            guess3=input("Guess:").strip()
 
+
+            if guess3.isalpha():
+                print("Not an integer")
+                sys.exit(1)
+            guess=int(guess3)
             if guess<1:
-                print(4/0)
-        except UnboundLocalError:
+                print("Not a positive integer")
+                sys.exit(2)
+
+        except ValueError:
             print("Not an integer")
             pass
 
-        except ZeroDivisionError:
-            print("Not a positive integer")
-            pass
+
 
         if guess<generated_number:
             print("Too small!")
         if guess>generated_number:
             print("Too large!")
 
-        if guess== generated_number:
+        if guess==generated_number:
             print("Just right!")
             break
 
