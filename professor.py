@@ -17,7 +17,7 @@ def main():
         else:
             print("EEE")
             while True:
-                
+
 
                 answer=input(f"{x}+{y}=")
 
@@ -63,11 +63,11 @@ def generate_integer(level):
             number1=random.randint(0,9)
             number2=random.randint(0,9)
         elif level==2:
-            number1=random.randint(0,99)
-            number2=random.randint(0,99)
+            number1=random.randint(10,99)
+            number2=random.randint(10,99)
         elif level==3:
-            number1=random.randint(0,999)
-            number2=random.randint(0,999)
+            number1=random.randint(100,999)
+            number2=random.randint(100,999)
 
     except ValueError:
         print("ValueError: Level is not 1,2 or 3")
