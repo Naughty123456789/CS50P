@@ -10,7 +10,7 @@ if len(sys.argv)==2:
         sys.exit(1)
 else:
     print("Missing command-line arguement")
-    sys.exit(2)
+    sys.exit(1)
 try:
     r=requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
     response=r.json()
