@@ -1,18 +1,14 @@
-import twttr
-
-
 from twttr import shorten
 
-
 def main():
-    check_no_vowels()
+    checking_vowels_and_caps()
+
+def checking_vowels_and_caps():
+    assert shorten("Twitter")=="Twttr"
+    assert shorten("Bittergourd")=="Bttrgrd"
+    assert shorten("Immediately")=="mmdtly"
 
 
 
-def check_no_vowels():
-    assert shorten("twitter")== 'twttr'
-
-
-
-if __name__=="__main__":
+if __name__ == "__main__":
     main()
