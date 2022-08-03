@@ -1,6 +1,5 @@
 from bank import value
 
-
 def main():
     test_zerodollars()
     test_twentydollars()
