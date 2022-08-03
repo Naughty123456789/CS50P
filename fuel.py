@@ -20,10 +20,10 @@ def convert(fraction):
             if z==0:
                 raise ZeroDivisionError
         except ValueError:
-            return None
+            pass
 
         except ZeroDivisionError:
-            return None
+            pass
 
         final=round((s/z)*100)
 
