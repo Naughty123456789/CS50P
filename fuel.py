@@ -25,7 +25,10 @@ def convert(fraction):
 
             else:
                 final=int(f*100)
-                return final
+                if final>100:
+                    continue
+                else:
+                    return final
 
 
         except (ValueError,ZeroDivisionError):
