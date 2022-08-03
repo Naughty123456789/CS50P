@@ -24,7 +24,7 @@ def convert(fraction):
                 continue
 
             else:
-                final=int(f*100)
+                final=round(f*100)
                 if final>100:
                     continue
                 else:
