@@ -19,7 +19,7 @@ def convert(fraction):
             z=int(y)
             f=s/z
 
-            if x>y:
+            if s>z:
                 fraction=input("Fraction:")
                 continue
 
@@ -44,7 +44,7 @@ def gauge(percentage):
     elif 99<=percentage<=100:
         return "F"
     else:
-         return f"{percentage}%"
+         return str(percentage)+"%"
 
 
 
