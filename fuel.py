@@ -10,28 +10,26 @@ def main():
 
 def convert(fraction):
     while True:
+
         try:
 
             x,y=fraction.split("/")
-            if x.isalpha()==True or y.isalpha()==True:
-                raise ValueError
+
             s=int(x)
             z=int(y)
+            f=s/z
 
-            if s>z:
-                raise ValueError
-            if z==0:
-                raise ZeroDivisionError
-        except ValueError:
-            sys.exit(1)
+            if x>y:
+                fraction=input("Fraction:")
+                continue
 
-        except ZeroDivisionError:
-            sys.exit(1)
+            else:
+                final=int(f*100)
+                return final
 
-        final=round((s/z)*100)
 
-        return final
-
+        except (ValueError,ZeroDivisionError):
+            continue
 
 
 
