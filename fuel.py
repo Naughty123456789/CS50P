@@ -1,3 +1,6 @@
+import sys
+
+
 def main():
     raw=input("Fraction:").strip()
     new1=convert(raw)
@@ -20,10 +23,10 @@ def convert(fraction):
             if z==0:
                 raise ZeroDivisionError
         except ValueError:
-            pass
+            sys.exit(1)
 
         except ZeroDivisionError:
-            pass
+            sys.exit(1)
 
         final=round((s/z)*100)
 
