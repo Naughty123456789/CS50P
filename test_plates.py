@@ -5,7 +5,7 @@ def main():
     test_at_least_two_letters()
     test_maxsix_mintwo_char()
     test_numbers_to_end_no_middle_no_zero()
-    no_special_characters()
+    test_no_special_characters()
 
 def test_at_least_two_letters():
     assert is_valid("CS50")== True
@@ -25,7 +25,7 @@ def  test_numbers_to_end_no_middle_no_zero():
     assert is_valid("CS055")==False
 
 
-def no_special_characters():
+def test_no_special_characters():
     assert is_valid("CS50!")==False
     assert is_valid("!?.,CS50")==False
 
