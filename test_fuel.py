@@ -19,6 +19,8 @@ def test_value_error():
 def test_correct_input():
     assert convert("1/4")==25 and gauge(25)=="25%"
     assert convert("3/5")==60 and gauge(60)=="60%"
+    assert convert("1/100")==1 and gauge(1)=="E"
+    assert convert("99/100")==99 and gauge(99)=="F"
 
 
 
