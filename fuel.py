@@ -1,45 +1,48 @@
 def main():
+    raw=input("Fraction:").strip()
+    new1=convert(raw)
+    last=gauge(new1)
+    print(last)
 
 
+def convert(fraction):
     while True:
         try:
-            fraction=input("Fraction:").strip()
 
             x,y=fraction.split("/")
-
+            if x.isalpha()==True or y.isalpha()==True:
+                raise ValueError
             s=int(x)
             z=int(y)
 
-
-
-
-            final=round((s/z)*100)
-
-            if final<=1:
-                print("E")
-                break
-            elif 99<=final<=100:
-                print("F")
-                break
-            elif s>z:
-                pass
-            else:
-                print(int(final),"%",sep="")
-                break
-
-
-
-
+            if s>z:
+                raise ValueError
+            if z==0:
+                raise ZeroDivisionError
         except ValueError:
-            print("ValueError")
-            pass
-
+            return None
 
         except ZeroDivisionError:
-            print("Zero Division Error")
-            pass
+            return None
+
+        final=round((s/z)*100)
+
+        return final
 
 
 
 
-main()
+
+def gauge(percentage):
+
+    if percentage<=1:
+        return "E"
+    elif 99<=percentage<=100:
+        return "F"
+    else:
+         return f"{percentage}%"
+
+
+
+if __name__ == "__main__":
+    main()
