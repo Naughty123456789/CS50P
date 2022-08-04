@@ -14,15 +14,12 @@ def main():
             for row in new_file:
                 table.append(row)
 
-        print(table[0])
+
         print(tabulate(table[1:],headers=table[0],tablefmt="grid"))
 
     except FileNotFoundError:
         print("File not found")
         sys.exit(1)
-
-
-
 
 
 
