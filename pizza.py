@@ -19,6 +19,7 @@ def main():
 
     except FileNotFoundError:
         print("File not found")
+        sys.exit(1)
 
 
 
