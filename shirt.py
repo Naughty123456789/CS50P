@@ -12,11 +12,11 @@ def main():
         print("Input does not exist")
         sys.exit(1)
     shirt_file=Image.open("shirt.png")
-    size=shirtfile.size
+    size= shirt_file.size
     picture=ImageOps.fit(Image_file,size)
 
     picture.paste(shirt_file,shirt_file)
-    picture.save(sys.arg[2])
+    picture.save(sys.argv[2])
 
 
 def checking_command_line():
@@ -34,7 +34,7 @@ def checking_command_line():
         print("Wrong extension")
         sys.exit(1)
 
-    if file1[1].lowe() != file2[1].lower()
+    if file1[1].lower() != file2[1].lower():
         print("Different extension")
         sys.exit(1)
 
@@ -44,4 +44,7 @@ def check_extend(file):
     if file in [".jpg",".jpeg",".png"]:
         return True
 
+
+if __name__ == "__main__":
+    main()
 
