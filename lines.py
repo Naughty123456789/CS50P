@@ -4,19 +4,15 @@ import sys
 def main():
     try:
         checking_command()
-
-
         file=open(sys.argv[1], "r")
         read_file=file.readlines()
-        num_of_lines=0
+        num=0
         for row in read_file:
-            if  not row.lstrip().startswith("#"):
-                num_of_lines+=1
+            if not row.strip().startswith("#") and row.strip() !='':
+                num+=1
 
-            if len(row.lstrip())>0:
-                num_of_lines+=1
 
-        print(num_of_lines)
+        print(num)
 
     except FileNotFoundError:
         print("File not found ")
