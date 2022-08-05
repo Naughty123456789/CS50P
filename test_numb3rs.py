@@ -8,12 +8,12 @@ def main():
 
 def test_range():
     assert validate(r"255.255.255.255")==True
-    assert validate(r"1.2.3.1000")==False
+    assert validate(r"1.2.3.512")==False
     assert validate(r"127.0.0.1")==True
     assert validate(r"512.512.512.512")==False
-    assert validate(r"1.2.1000.3")==False
-    assert validate(r"1.1000.2.3")==False
-    assert validate(r"1000.1.2.3")==False
+    assert validate(r"1.2.512.3")==False
+    assert validate(r"1.512.2.3")==False
+    assert validate(r"512.1.2.3")==False
 
 
 def test_alphabet():
