@@ -17,7 +17,7 @@ def test_alphabet():
     assert validate("cat")==False
 
 def test_special_case():
-    assert validate("233....")==False
+    assert validate(r"1")==False
 
 
 if __name__ == "__main__":
