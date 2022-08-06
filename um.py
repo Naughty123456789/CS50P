@@ -9,8 +9,5 @@ def count(s):
     return len(um_list)
 
 
-
-
-
 if __name__ == "__main__":
     main()
