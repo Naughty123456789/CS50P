@@ -3,7 +3,7 @@ class Jar:
         self._capacity= capacity
         self._size=0
 
-        if self._capacity<0:
+        if capacity<0:
             raise ValueError("Wrong capacity")
 
 
